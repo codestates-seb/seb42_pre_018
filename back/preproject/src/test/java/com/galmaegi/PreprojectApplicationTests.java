@@ -1,4 +1,4 @@
-package com.galmaegi.preproject;
+package com.galmaegi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
