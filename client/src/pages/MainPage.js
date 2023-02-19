@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './mainpage.css';
+import { BiFilter } from 'react-icons/bi';
 
 export const MainPage = () => {
   return (
@@ -29,7 +30,14 @@ export const MainPage = () => {
             </div>
             <div>
               {/* 필터 아이콘 추가해야 함 */}
-              <button className="filter-btn">Filter</button>
+              <button className="d-flex filter-btn">
+                <BiFilter
+                  size="18"
+                  viewBox="0 0 24 24"
+                  color="var(--powder-700)"
+                />
+                <span>&nbsp;Filter</span>
+              </button>
             </div>
           </div>
         </div>
