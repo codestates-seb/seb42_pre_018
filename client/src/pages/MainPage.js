@@ -1,23 +1,39 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import './mainpage.css';
+
 export const MainPage = () => {
   return (
     <>
       <div id="mainbar">
-        <div>
+        <div className="title d-flex">
           <h1>All Questions</h1>
           <div>
             <button>Ask Question</button>
           </div>
         </div>
-        <div>
-          <div>23,507,409 questions</div>
-          <div>
-            <div>tab</div>
+        <div className="topbar d-flex">
+          <div className="number d-flex">
+            <div>23,507,409 questions</div>
+          </div>
+          <div className="d-flex">
+            <div className="navbar d-flex">
+              <a href="#" className="left-navbar">
+                Newest
+              </a>
+              <a href="#">Active</a>
+              <a href="#">Bountied</a>
+              <a href="#">Unanswered</a>
+              <a href="#" className="right-navbar">
+                More
+              </a>
+            </div>
             <div>
-              <button>Filter</button>
+              {/* 필터 아이콘 추가해야 함 */}
+              <button className="filter-btn">Filter</button>
             </div>
           </div>
         </div>
-        <div>
+        <div className="questions">
           {/* questions */}
           {/* 여기에 map 사용 */}
           <div>

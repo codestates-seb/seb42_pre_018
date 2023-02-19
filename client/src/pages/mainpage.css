@@ -1,0 +1,90 @@
+* {
+  font-style: inherit;
+  color: var(--black-800);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: 400;
+
+}
+
+#mainbar {
+  padding: 24px 16px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.title {
+  margin-bottom: 26px;
+}
+
+.title h1 {
+  flex: 1 0 auto;
+  margin: 0;
+}
+
+.title button {
+  width: 99px;
+  height: 38px;
+  background-color: var(--blue-500);
+  color: white;
+  font-size: 0.83rem;
+  box-shadow: inset rgba(255, 255, 255, 0.4) 0px 1px 0px 0px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid var(--blue-500);
+  padding-bottom: 0.15rem;
+}
+
+.topbar {
+  margin-bottom: 12px;
+}
+
+.topbar .number {
+  font-size: 17px;
+  flex: 1 0 auto;
+  align-items: center;
+}
+
+.navbar {
+  margin-right: 16px;
+}
+
+.navbar a {
+  font-size: 12px;
+  color: var(--black-500);
+  padding: 0.7rem;
+  border-right: 1px solid var(--black-300);
+  border-bottom: 1px solid var(--black-300);
+  border-top: 1px solid var(--black-300);
+}
+
+.left-navbar {
+  border-left: 1px solid var(--black-300);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.right-navbar {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.navbar a:hover {
+  background-color: var(--black-025);
+  color: var(--black-600);
+}
+
+.filter-btn {
+  font-size: 12px;
+  border: 1px solid var(--powder-500);
+  background-color: var(--powder-100);
+  padding: 0.8em;
+}
