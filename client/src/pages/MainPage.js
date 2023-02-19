@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './mainpage.css';
 import { BiFilter } from 'react-icons/bi';
+import Question from '../components/Question/Question';
 
 export const MainPage = () => {
   return (
@@ -42,24 +43,7 @@ export const MainPage = () => {
           </div>
         </div>
         <div className="questions">
-          {/* questions */}
-          {/* 여기에 map 사용 */}
-          <div>
-            <div>
-              <div>0 votes</div>
-              <div>0 answers</div>
-              <div>2 views</div>
-            </div>
-            <div>
-              <h2>question title</h2>
-              <div>question content</div>
-              <div>
-                <div>tag</div>
-                <div>user</div>
-                <div>time</div>
-              </div>
-            </div>
-          </div>
+          <Question></Question>
         </div>
         <div>
           <div>pagination-left</div>

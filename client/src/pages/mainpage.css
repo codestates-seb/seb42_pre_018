@@ -22,7 +22,7 @@ h1 {
 }
 
 .title {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .title h1 {
@@ -96,4 +96,11 @@ h1 {
   color: var(--powder-800);
   border: 1px solid var(--powder-500);
   box-shadow: inset 0 1px 0 0 hsla(0, 0%, 100%, 0.7);
+}
+
+.questions {
+  border-top: 1px solid var(--black-100);
+  margin-left: -16px;
+  display: flex;
+  flex-direction: column;
 }
