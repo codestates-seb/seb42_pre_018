@@ -2,11 +2,12 @@
 import './mainpage.css';
 import { BiFilter } from 'react-icons/bi';
 import Question from '../components/Question/Question';
+import Pagination from '../components/Pagination/Pagination';
 
 export const MainPage = () => {
   return (
     <>
-      <div id="mainbar">
+      <main>
         <div className="title d-flex">
           <h1>All Questions</h1>
           <div>
@@ -45,11 +46,10 @@ export const MainPage = () => {
         <div className="questions">
           <Question></Question>
         </div>
-        <div>
-          <div>pagination-left</div>
-          <div>pagination-right</div>
+        <div className="pagination">
+          <Pagination></Pagination>
         </div>
-      </div>
+      </main>
     </>
   );
 };
