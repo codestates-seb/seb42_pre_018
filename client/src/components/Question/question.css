@@ -1,0 +1,57 @@
+.question {
+  padding: 16px;
+  font: inherit;
+  border-bottom: 1px solid var(--black-075);
+}
+
+.question-stats {
+  flex-direction: column;
+  align-items: flex-end;
+  width: 108px;
+  margin-right: 16px;
+  font-size: 13px;
+  row-gap: 7px;
+}
+
+.stats-item {
+  white-space: nowrap; /* 줄바꿈 안되게 */
+}
+
+.question-content {
+  flex-grow: 1;
+}
+
+.question-content h3 {
+  font-weight: 400;
+  font-size: 17px;
+  word-break: break-word;
+  color: var(--blue-600);
+  margin-top: -3px;
+}
+
+.question-content h3:hover {
+  color: var(--blue-500);
+}
+
+.question-summary {
+  color: var(--black-700);
+  font-size: 13px;
+  margin-top: 3px;
+  line-height: 140%;
+}
+
+.question-meta {
+  margin-top: 24px;
+  justify-content: flex-end;
+  column-gap: 4px;
+  font-size: 13px;
+}
+
+.username {
+  color: var(--blue-600);
+}
+
+.time {
+  color: var(--black-500);
+}
+
