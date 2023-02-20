@@ -2,6 +2,7 @@
 import './mainpage.css';
 import { BiFilter } from 'react-icons/bi';
 import Question from '../components/Question/Question';
+import Pagination from '../components/Pagination/Pagination';
 
 export const MainPage = () => {
   return (
@@ -45,9 +46,8 @@ export const MainPage = () => {
         <div className="questions">
           <Question></Question>
         </div>
-        <div>
-          <div>pagination-left</div>
-          <div>pagination-right</div>
+        <div className="pagination">
+          <Pagination></Pagination>
         </div>
       </div>
     </>
