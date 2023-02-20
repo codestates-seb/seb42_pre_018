@@ -1,0 +1,100 @@
+header {
+  height: 50px;
+  border-top: 3px solid hsl(27, 90%, 55%);
+  box-shadow: 0 1px 2px hwb(0 0% 100% / 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 2px 8px hsla(0, 0%, 0%, 0.05); 
+  width: 100%;
+  background-color: var(--black-025);
+}
+
+.topbar--container {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.topbar--logo {
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.img_glyph {
+  margin-left: 0;
+  background-image: url(https://cdn.sstatic.net/Img/unified/sprites.svg?v=fcc0ea44ba27);
+  width: 150px;
+  height: 30px;
+  text-indent: -9999em;
+  display: inline-block;
+  background-position: 0 -500px;
+}
+
+.navigation {
+  align-items: center;
+}
+
+.navigation li a {
+  color: var(--black-600);
+  font-size: 13px;
+  padding: 6px 12px;
+}
+
+#search {
+  flex-grow: 1;
+  align-items: center;
+  padding: 6px;
+}
+
+.searchbar {
+  flex-grow: 1;
+  position: relative;
+}
+
+.searchbar input {
+  flex-grow: 1;
+  border: 1px solid var(--black-200);
+  border-radius: 3px;
+  padding: 0.5em 0.7em;
+  padding-left: 32px;
+  font-size: 13px;
+}
+
+.searchbar .s-input-icon {
+  position: absolute;
+  top: 25%;
+  left: 0.7em;
+  color: var(--black-400);
+  fill: currentColor;
+}
+
+.topbar--content {
+  align-items: center;
+  margin-top: -5px;
+  margin-left: 2px;
+  margin-right: 8px;
+}
+
+.avatar {
+  width: 40px;
+}
+
+.svg-icon {
+  color: var(--black-600);
+  fill: currentColor;
+}
+
+.topbar--content li {
+  display: inline-flex;
+}
+
+.topbar--content li a {
+  padding: 0px 10px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2px;
+}
