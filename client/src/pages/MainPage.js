@@ -7,7 +7,7 @@ import Pagination from '../components/Pagination/Pagination';
 export const MainPage = () => {
   return (
     <>
-      <div id="mainbar">
+      <main>
         <div className="title d-flex">
           <h1>All Questions</h1>
           <div>
@@ -49,7 +49,7 @@ export const MainPage = () => {
         <div className="pagination">
           <Pagination></Pagination>
         </div>
-      </div>
+      </main>
     </>
   );
 };
