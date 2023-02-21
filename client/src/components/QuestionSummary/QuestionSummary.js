@@ -1,6 +1,6 @@
-import './question.css';
+import './questionsummary.css';
 
-const Question = () => {
+const QuestionSummary = () => {
   return (
     <>
       <div className="question d-flex">
@@ -30,4 +30,4 @@ const Question = () => {
   );
 };
 
-export default Question;
+export default QuestionSummary;
