@@ -133,7 +133,3 @@
   --highlight-addition: var(--green-700);
   --highlight-deletion: var(--red-600);
 }
-
-.css-1itoclz-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
-  background-color: orange;
-}
