@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './mainpage.css';
 import { BiFilter } from 'react-icons/bi';
-import Question from '../components/Question/Question';
 import Pagination from '../components/Pagination/Pagination';
+import QuestionSummary from '../components/QuestionSummary/QuestionSummary';
 
 export const MainPage = () => {
   return (
@@ -44,7 +44,7 @@ export const MainPage = () => {
           </div>
         </div>
         <div className="questions">
-          <Question></Question>
+          <QuestionSummary></QuestionSummary>
         </div>
         <div className="pagination">
           <Pagination></Pagination>
