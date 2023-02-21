@@ -1,4 +1,4 @@
-import './question.css';
+import './questionsummary.css';
 
 const Question = () => {
   return (
