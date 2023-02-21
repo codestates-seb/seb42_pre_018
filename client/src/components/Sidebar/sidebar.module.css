@@ -1,0 +1,14 @@
+.sidebar__Nav{
+    width: 164px;
+    height: 100vh;
+    float: left;
+}
+.sidebar__Nav.opened{
+    background: var(--black-050);
+}
+
+.sidebar__li{
+    display: flex;
+    align-items: center;
+    height: 34px;
+}
