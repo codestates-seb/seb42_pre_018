@@ -3,6 +3,7 @@ import './mainpage.css';
 import { BiFilter } from 'react-icons/bi';
 import Pagination from '../components/Pagination/Pagination';
 import QuestionSummary from '../components/QuestionSummary/QuestionSummary';
+import questions from '../assets/data/questions.json';
 
 export const MainPage = () => {
   return (
@@ -16,7 +17,7 @@ export const MainPage = () => {
         </div>
         <div className="topbar d-flex">
           <div className="number d-flex">
-            <div>23,507,409 questions</div>
+            <div>{questions.length} questions</div>
           </div>
           <div className="d-flex">
             <div className="navbar d-flex">
@@ -44,7 +45,11 @@ export const MainPage = () => {
           </div>
         </div>
         <div className="questions">
-          <QuestionSummary></QuestionSummary>
+          {questions.map((question) => {
+            return (
+              <QuestionSummary question={question} key={question.question_id} />
+            );
+          })}
         </div>
         <div className="pagination">
           <Pagination></Pagination>
