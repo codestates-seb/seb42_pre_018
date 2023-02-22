@@ -1,13 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './authheader.css';
+import { Link } from 'react-router-dom';
+
 export const AuthHeader = () => {
   return (
     <>
       <header className="d-flex">
         <div className="topbar--container d-flex">
-          <a href="#" className="topbar--logo d-flex">
+          <Link to="/" className="topbar--logo d-flex">
             <span className="img_glyph">Stack Overflow</span>
-          </a>
+          </Link>
           <ul className="navigation d-flex">
             <li>
               <a href="#">Products</a>
