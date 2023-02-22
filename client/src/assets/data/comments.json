@@ -1,0 +1,44 @@
+{
+	"comment": [
+		{
+			"comment_id": 348,
+			"comment_main": "63f485268152cc526a58c6c8",
+			"comment_time": "2018-12-10T13:49:51.141Z",
+			"comment_writer_email": "email01@gmail.com",
+			"comment_writer_name": "Bailey Lott",
+			"qna_id": 750
+		},
+		{
+			"comment_id": 266,
+			"comment_main": "63f4852624a3d88440c36ddc",
+			"comment_time": "2018-12-10T13:49:51.141Z",
+			"comment_writer_email": "email02@gmail.com",
+			"comment_writer_name": "August Case",
+			"qna_id": 67
+		},
+		{
+			"comment_id": 625,
+			"comment_main": "63f48526376c6eafa28579e4",
+			"comment_time": "2018-12-10T13:49:51.141Z",
+			"comment_writer_email": "email03@gmail.com",
+			"comment_writer_name": "Lila Mccray",
+			"qna_id": 805
+		},
+		{
+			"comment_id": 860,
+			"comment_main": "63f485269eefafb550659127",
+			"comment_time": "2018-12-10T13:49:51.141Z",
+			"comment_writer_email": "email04@gmail.com",
+			"comment_writer_name": "Sage Fox",
+			"qna_id": 280
+		},
+		{
+			"comment_id": 183,
+			"comment_main": "63f48526944207a0d98651a1",
+			"comment_time": "2018-12-10T13:49:51.141Z",
+			"comment_writer_email": "email05@gmail.com",
+			"comment_writer_name": "Bates Black",
+			"qna_id": 976
+		}
+	]
+}

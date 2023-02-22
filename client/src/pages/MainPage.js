@@ -3,6 +3,8 @@ import './mainpage.css';
 import { BiFilter } from 'react-icons/bi';
 import Pagination from '../components/Pagination/Pagination';
 import QuestionSummary from '../components/QuestionSummary/QuestionSummary';
+import questions from '../assets/data/questions.json';
+import { Link } from 'react-router-dom';
 
 export const MainPage = () => {
   return (
@@ -11,12 +13,14 @@ export const MainPage = () => {
         <div className="title d-flex">
           <h1>All Questions</h1>
           <div>
-            <button>Ask Question</button>
+            <Link to="/ask">
+              <button>Ask Question</button>
+            </Link>
           </div>
         </div>
         <div className="topbar d-flex">
           <div className="number d-flex">
-            <div>23,507,409 questions</div>
+            <div>{questions.length} questions</div>
           </div>
           <div className="d-flex">
             <div className="navbar d-flex">
@@ -44,7 +48,11 @@ export const MainPage = () => {
           </div>
         </div>
         <div className="questions">
-          <QuestionSummary></QuestionSummary>
+          {questions.map((question) => {
+            return (
+              <QuestionSummary question={question} key={question.question_id} />
+            );
+          })}
         </div>
         <div className="pagination">
           <Pagination></Pagination>

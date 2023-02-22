@@ -1,0 +1,59 @@
+{
+	"answer": [
+		{
+			"answer_id": 1,
+			"answer_title": "title 1",
+			"answer_main": "I think you should set these ......",
+			"answer_views": 114,
+			"answer_attachFile": "file_url",
+			"answer_time": "2018-12-10T13:49:51.141Z",
+			"answer_closed": true,
+			"answer_writer_email": "abcde1@naver.com",
+			"answer_writer_name": "Charity Rush"
+		},
+		{
+			"answer_id": 2,
+			"answer_title": "title 2",
+			"answer_main": "I think you should set these ......",
+			"answer_views": 5,
+			"answer_attachFile": "file_url",
+			"answer_time": "2018-12-10T13:49:51.141Z",
+			"answer_closed": true,
+			"answer_writer_email": "abcde2@naver.com",
+			"answer_writer_name": "Young Harrison"
+		},
+		{
+			"answer_id": 3,
+			"answer_title": "title 3",
+			"answer_main": "I think you should set these ......",
+			"answer_views": 24,
+			"answer_attachFile": "file_url",
+			"answer_time": "2018-12-10T13:49:51.141Z",
+			"answer_closed": false,
+			"answer_writer_email": "abcde3@naver.com",
+			"answer_writer_name": "Duffy Reed"
+		},
+		{
+			"answer_id": 4,
+			"answer_title": "title 4",
+			"answer_main": "I think you should set these ......",
+			"answer_views": 1,
+			"answer_attachFile": "file_url",
+			"answer_time": "2018-12-10T13:49:51.141Z",
+			"answer_closed": false,
+			"answer_writer_email": "abcde4@naver.com",
+			"answer_writer_name": "Parker Phillips"
+		},
+		{
+			"answer_id": 5,
+			"answer_title": "title 5",
+			"answer_main": "I think you should set these ......",
+			"answer_views": 550,
+			"answer_attachFile": "file_url",
+			"answer_time": "2018-12-10T13:49:51.141Z",
+			"answer_closed": false,
+			"answer_writer_email": "abcde5@naver.com",
+			"answer_writer_name": "Jean Boyd"
+		}
+	]
+}

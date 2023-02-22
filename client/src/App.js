@@ -4,7 +4,8 @@ import { AuthHeader } from './components/Header/AuthHeader';
 import { RightSidebar } from './components/RightSidebar/RightSidebar';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { MainPage } from './pages/MainPage';
-// import { DetailPage } from './pages/DetailPage';
+import { AskQuestion } from './pages/AskQuestion';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
       <AuthHeader></AuthHeader>
       <div className="main__flex">
         <Sidebar></Sidebar>
-        <MainPage></MainPage>
-        {/* <DetailPage></DetailPage> */}
+        <Routes>
+          <Route path="/" element={<MainPage />}></Route>
+          <Route path="/ask" element={<AskQuestion />}></Route>
+        </Routes>
         <RightSidebar></RightSidebar>
       </div>
       <Footer></Footer>
