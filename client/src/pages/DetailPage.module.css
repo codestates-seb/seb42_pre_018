@@ -1,14 +1,85 @@
+.detailpage button{
+    border: none;
+    color: hsl(210,8%,45%);
+    background: none;
+    cursor: pointer;
+    margin-right: 6px;
+}
 .detailpage{
     width: 100%;
     padding: 24px 16px;
 }
 .detailpage__header{
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--black-075);
+}
+.detailpage__header h1{
+    font-weight: normal;
+    font-size: 27px;
+}
+.detailpage__info{
+    display: flex;
+    margin: 12px 0;
+}
+.detailpage__info p{
+    margin-right: 12px;
+    font-size: 13px;
+    color: hsl(210,8%,45%);
+}
+.detailpage__info p span{
+    color: #232629;
+}
+button.detailpage__askbtn{
+    width: 99px;
+    height: 38px;
+    background-color: var(--blue-500);
+    color: white;
+    font-size: 0.83rem;
+    box-shadow: inset rgba(255, 255, 255, 0.4) 0px 1px 0px 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid var(--blue-500);
+    padding-bottom: 0.15rem;
 }
 .detailpage__post{
     display: flex;
     margin-top: 16px;
+}
+.detailpage__asked{
+    width: 200px;
+    padding: 5px 6px 7px 7px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.detailpage__asked__post{
+    background: #d9eaf7;
+}
+.detailpage__asked p{
+    margin-bottom: 6px;
+    color: var(--black-500);
+}
+.detailpage__asked strong{
+    width: 147px;
+    display: block;
+    float: left;
+    color: #0074cc;
+    font-size: 13px;
+    font-weight: 400;
+}
+.detailpage__asked__img{
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-right: 6px;
+}
+.detailpage__asked__img img{
+    height: 100%;
 }
 .detailpage__voting{
     padding-right: 16px;
@@ -43,8 +114,29 @@
     padding: 6px 6px 6px 24px;
     font-size: 13px;
 }
+.detailpage__comment__btn{
+    margin-top: 12px;
+    opacity: .6;
+}
 
+.detailpage__answer__editer{
+    margin-top: 24px;
+    border-top: 1px solid var(--black-075);
+}
+.detailpage__answer__h3{
+    margin-top: 24px;
+}
 .detailpage__answer__editer_input{
     width: 100%;
     height: 100px;
+    margin-top: 24px;
+}
+button.detailpage__answer__postbtn{
+    margin-top: 24px;
+    padding: 10px;
+    border-radius: 3px;
+    color: #fff;
+    background: hsl(206,100%,52%);
+    border-top: 1px solid hsl(206,100%,52%);
+    box-shadow: inset 0 1px 0 0 hsla(0,0%,100%,0.4);
 }

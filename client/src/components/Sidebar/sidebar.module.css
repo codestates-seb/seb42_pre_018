@@ -39,7 +39,7 @@
 }
 .sticky{
     position: sticky;
-    top: 24px;
+    top: 66px;
     align-self: flex-start;
 }
 .sidebar__cf__icon, .sidebar__ec__icon, .sidebar__q__icon{
