@@ -140,3 +140,10 @@
   max-width: 1264px;
   margin: 0 auto;
 }
+
+/* 페이지네이션 클릭시 스타일 */
+.css-1itoclz-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: var(--orange-400) !important;
+  color: white !important;
+  border: none !important;
+}
