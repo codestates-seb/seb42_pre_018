@@ -138,7 +138,8 @@
   display: flex;
   min-width: 1264px;
   max-width: 1264px;
-  margin: 0 auto;
+  margin: 50px auto 0;
+  clear: both;
 }
 
 /* 페이지네이션 클릭시 스타일 */
@@ -146,4 +147,10 @@
   background-color: var(--orange-400) !important;
   color: white !important;
   border: none !important;
+}
+
+.topbar--container.d-flex{
+  max-width: 1264px;
+  margin-left: auto;
+  margin-right: auto;
 }

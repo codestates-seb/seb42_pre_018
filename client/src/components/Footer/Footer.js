@@ -5,8 +5,21 @@ export const Footer = () => {
     <footer>
       <nav className={styles.footer__nav}>
         <div className={styles.footer__nav__wrap}>
-          <div>logo</div>
-          <div>
+          <div className={styles.footer__logo}>
+            <span className="img_glyph">Stack Overflow</span>
+            <div>
+              <h5 className={styles.footer__h5}>STACK OVERFLOW</h5>
+              <ul>
+                <li>
+                  <a href="https://stackoverflow.com/questions">Questions</a>
+                </li>
+                <li>
+                  <a href="https://stackoverflow.com/help">Help</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={styles.footer__col}>
             <h5 className={styles.footer__h5}>PRODUCTS</h5>
             <ul>
               <li>
@@ -23,7 +36,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className={styles.footer__col}>
             <h5 className={styles.footer__h5}>COMPANY</h5>
             <ul>
               <li>CodeStates</li>
@@ -32,7 +45,7 @@ export const Footer = () => {
               <li>018</li>
             </ul>
           </div>
-          <div>
+          <div className={styles.footer__col}>
             <h5 className={styles.footer__h5}>TEAM</h5>
             <ul>
               <li>PMS</li>

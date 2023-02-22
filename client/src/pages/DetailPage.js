@@ -1,21 +1,25 @@
 import styles from './DetailPage.module.css';
+import dummyImg from '../assets/images/dummy__profile__img01.jpg';
 
 export const DetailPage = () => {
   return (
     <main className={styles.detailpage}>
-      <header className={styles.detailpage__header}>
-        <h1>Detail Page Name</h1>
-        <div className={styles.detailpage__info}>
-          <p>
-            Asked&nbsp;
-            <span>9 days ago</span>
-          </p>
-          <p>
-            Viewed&nbsp;
-            <span>91 times</span>
-          </p>
+      <div className={styles.detailpage__header}>
+        <div className={styles.detailpage__header__wrap}>
+          <h1>Detail Page Name</h1>
+          <div className={styles.detailpage__info}>
+            <p>
+              Asked&nbsp;
+              <span>9 days ago</span>
+            </p>
+            <p>
+              Viewed&nbsp;
+              <span>91 times</span>
+            </p>
+          </div>
         </div>
-      </header>
+        <button className={styles.detailpage__askbtn}>Ask Question</button>
+      </div>
       <div className={styles.detailpage__post}>
         <div className={styles.detailpage__voting}>
           <p>UP</p>
@@ -53,11 +57,16 @@ export const DetailPage = () => {
               <button>Edit</button>
               <button>Delete</button>
             </div>
-            <div className={styles.detailpage__asked}>
+            <div
+              className={`${styles.detailpage__asked} ${styles.detailpage__asked__post}`}
+            >
               <p>
                 asked&nbsp;
                 <span>Feb 11 at 17:39</span>
               </p>
+              <div className={styles.detailpage__asked__img}>
+                <img src={dummyImg} alt=""></img>
+              </div>
               <strong>Name</strong>
             </div>
           </div>
@@ -66,7 +75,9 @@ export const DetailPage = () => {
               kitten computer adolescence sunrise apple serendipity like flutter
               <span> - name Feb 14 at 5:22</span>
             </p>
-            <button>add a comment</button>
+            <button className={styles.detailpage__comment__btn}>
+              Add a comment
+            </button>
           </div>
         </div>
       </div>
@@ -93,6 +104,9 @@ export const DetailPage = () => {
                 asked&nbsp;
                 <span>Feb 11 at 17:39</span>
               </p>
+              <div className={styles.detailpage__asked__img}>
+                <img src={dummyImg} alt=""></img>
+              </div>
               <strong>Name</strong>
             </div>
           </div>
@@ -101,13 +115,18 @@ export const DetailPage = () => {
               kitten computer adolescence sunrise apple serendipity like flutter
               <span> - name Feb 14 at 5:22</span>
             </p>
-            <button>add a comment</button>
+            <button className={styles.detailpage__comment__btn}>
+              Add a comment
+            </button>
           </div>
         </div>
       </div>
       <div className={styles.detailpage__answer__editer}>
-        <h3>Your Answer</h3>
+        <h3 className={styles.detailpage__answer__h3}>Your Answer</h3>
         <input className={styles.detailpage__answer__editer_input}></input>
+        <button className={styles.detailpage__answer__postbtn}>
+          Post Your Answer
+        </button>
       </div>
     </main>
   );
