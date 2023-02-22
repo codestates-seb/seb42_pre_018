@@ -1,14 +1,60 @@
+.sidebar__Nav a{
+    line-height: calc(17 / 13);
+    color: var(--black-600);
+}
 .sidebar__Nav{
-    width: 164px;
-    height: 100vh;
-    float: left;
+    min-width: 164px;
+    position: relative;
+    border-right: 1px solid var(--black-100);
 }
 .sidebar__Nav.opened{
     background: var(--black-050);
 }
 
-.sidebar__li{
+.sidebar__li, .sidebar__home{
     display: flex;
     align-items: center;
     height: 34px;
+    font-size: 13px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.sidebar__li a:hover, .sidebar__home a:hover{
+    color: #000;
+}
+.sidebar__h1{
+    font-size: 11px;
+    margin: 16px 0 0 8px;
+    box-sizing: border-box;
+    color: var(--fc-light);
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar__h1__icon{
+    padding: 0 12px;
+}
+.sidebar__home{
+    padding: 0;
+    margin: 16px 0 0 8px;
+}
+.sticky{
+    position: sticky;
+    top: 24px;
+    align-self: flex-start;
+}
+.sidebar__cf__icon, .sidebar__ec__icon, .sidebar__q__icon{
+    position: relative;
+}
+.sidebar__cf__icon::before, .sidebar__ec__icon::before, .sidebar__q__icon::before{
+    position: absolute;
+    left: -14px;
+}
+.sidebar__cf__icon::before{
+    content: 'c';
+}
+.sidebar__ec__icon::before{
+    content: 'e';
+}
+.sidebar__q__icon::before{
+    content: 'q';
 }

@@ -1,0 +1,50 @@
+.detailpage{
+    width: 100%;
+    padding: 24px 16px;
+}
+.detailpage__header{
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--black-075);
+}
+.detailpage__post{
+    display: flex;
+    margin-top: 16px;
+}
+.detailpage__voting{
+    padding-right: 16px;
+}
+.detailpage__voting > *{
+    padding: 8px 0;
+    text-align: center;
+}
+.detailpage__content{
+    padding-right: 16px;
+    font-size: 15px;
+}
+.detailpage__menu{
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.detailpage__answer__count{
+    font-size: 19px;
+    margin-top: 60px;
+}
+.detailpage__answer__wrap{
+    display: flex;
+    margin-top: 24px;
+}
+.detailpage__comment__wrap{
+    margin-top: 24px;
+    border-top: 1px solid var(--black-075);
+}
+.detailpage__comment{
+    border-bottom: 1px solid var(--black-075);
+    padding: 6px 6px 6px 24px;
+    font-size: 13px;
+}
+
+.detailpage__answer__editer_input{
+    width: 100%;
+    height: 100px;
+}

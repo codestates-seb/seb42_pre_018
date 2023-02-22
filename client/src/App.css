@@ -133,3 +133,10 @@
   --highlight-addition: var(--green-700);
   --highlight-deletion: var(--red-600);
 }
+
+.main__flex{
+  display: flex;
+  min-width: 1264px;
+  max-width: 1264px;
+  margin: 0 auto;
+}
