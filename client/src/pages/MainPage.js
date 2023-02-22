@@ -4,6 +4,7 @@ import { BiFilter } from 'react-icons/bi';
 import Pagination from '../components/Pagination/Pagination';
 import QuestionSummary from '../components/QuestionSummary/QuestionSummary';
 import questions from '../assets/data/questions.json';
+import { Link } from 'react-router-dom';
 
 export const MainPage = () => {
   return (
@@ -12,7 +13,9 @@ export const MainPage = () => {
         <div className="title d-flex">
           <h1>All Questions</h1>
           <div>
-            <button>Ask Question</button>
+            <Link to="/ask">
+              <button>Ask Question</button>
+            </Link>
           </div>
         </div>
         <div className="topbar d-flex">
