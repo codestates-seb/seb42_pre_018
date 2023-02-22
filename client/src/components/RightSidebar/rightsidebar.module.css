@@ -1,0 +1,8 @@
+.rightSidebar{
+    width: 300px;
+    margin-left: 24px;
+}
+.rightSidebar__article{
+    border-radius: 3px;
+    border: 1px solid var(--yellow-200);
+}
