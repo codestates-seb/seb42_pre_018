@@ -1,24 +1,20 @@
 import './App.css';
 import { Footer } from './components/Footer/Footer';
 import { AuthHeader } from './components/Header/AuthHeader';
-import { RightSidebar } from './components/RightSidebar/RightSidebar';
-import { Sidebar } from './components/Sidebar/Sidebar';
-import { MainPage } from './pages/MainPage';
-import { AskQuestion } from './pages/AskQuestion';
+import { BasicPage } from './pages/BasicPage';
+import { AskPage } from './pages/AskPage';
 import { Routes, Route } from 'react-router-dom';
+import { DetailPage } from './pages/DetailPage';
 
 function App() {
   return (
     <div className="App">
       <AuthHeader></AuthHeader>
-      <div className="main__flex">
-        <Sidebar></Sidebar>
-        <Routes>
-          <Route path="/" element={<MainPage />}></Route>
-          <Route path="/ask" element={<AskQuestion />}></Route>
-        </Routes>
-        <RightSidebar></RightSidebar>
-      </div>
+      <Routes>
+        <Route path="/" element={<BasicPage />}></Route>
+        <Route path="/detail" element={<DetailPage />}></Route>
+        <Route path="/ask" element={<AskPage />}></Route>
+      </Routes>
       <Footer></Footer>
     </div>
   );

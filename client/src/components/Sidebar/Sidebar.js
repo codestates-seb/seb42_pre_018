@@ -1,5 +1,5 @@
 import styles from './sidebar.module.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
   return (
@@ -7,15 +7,15 @@ export const Sidebar = () => {
       <div className={styles.sticky}>
         <ol>
           <li className={styles.sidebar__home}>
-            <a href="a">Home</a>
+            <Link to="/">Home</Link>
           </li>
         </ol>
         <h1 className={styles.sidebar__h1}>PUBLIC</h1>
         <ol>
           <li className={styles.sidebar__li}>
-            <a href="a" className={styles.sidebar__q__icon}>
+            <Link to="/detail" className={styles.sidebar__q__icon}>
               Questions
-            </a>
+            </Link>
           </li>
           <li className={styles.sidebar__li}>
             <a href="https://stackoverflow.com/tags">Tags</a>
