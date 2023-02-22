@@ -1,0 +1,79 @@
+.askpage{
+    width: 100%;
+    margin-top: 50px;
+    background: var(--black-025);
+}
+.askpage__wrap{
+    width: 1264px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+.askpage__header{
+    display: flex;
+    align-items: center;
+    height: 130px;
+    background: url('https://cdn.sstatic.net/Img/ask/background.svg?v=2e9a8205b368') top right no-repeat;
+}
+.askpage__header h1{
+    font-size: 27px;
+}
+.askpage__tip{
+    width: 850px;
+    padding: 24px;
+    border: 1px solid #a6ceed;
+    background: #ebf4fb;
+    border-radius: 3px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+.askpage__tip h3{
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+.askpage__tip h4{
+    font-size: 13px;
+    font-weight: 500;
+    margin: 24px 0 12px;
+}
+.askpage__tip p{
+    font-size: 15px;
+    font-weight: 300;
+}
+.askpage__tip li{
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    list-style: inside;
+}
+.askpage__form{
+    width: 850px;
+    padding: 24px;
+    border: 1px solid var(--black-075);
+    margin-bottom: 12px;
+    background: #fff;
+}
+.askpage__form h2{
+    font-size: 15px;
+    font-weight: 500;
+}
+.askpage__form p{
+    font-size: 12px;
+    font-weight: 300;
+    margin: 6px 0;
+}
+.askpage__form input{
+    width: 100%;
+    height: 38px;
+}
+.askpage__btn{
+    padding: 10px;
+    margin-top: 16px;
+    background-color: var(--blue-500);
+    color: white;
+    font-size: 0.83rem;
+    box-shadow: inset rgba(255, 255, 255, 0.4) 0px 1px 0px 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid var(--blue-500);
+}
