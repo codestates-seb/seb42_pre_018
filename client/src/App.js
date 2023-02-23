@@ -7,6 +7,7 @@ import LayoutWrapper from './components/LayoutWrapper/LayoutWrapper';
 import { MainPage } from './pages/MainPage';
 import { LoginPage } from './pages/LoginPage';
 import { SignupPage } from './pages/SignupPage';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
@@ -32,7 +33,15 @@ function App() {
           }
         ></Route>
         {/* 질문 작성 페이지 */}
-        <Route path="/ask" element={<AskPage />}></Route>
+        <Route
+          path="/ask"
+          element={
+            <>
+              <AskPage />
+              <Footer />
+            </>
+          }
+        ></Route>
         {/* 로그인 페이지 */}
         <Route path="/login" element={<LoginPage />}></Route>
         {/* 회원가입 페이지 */}
