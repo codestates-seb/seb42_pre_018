@@ -1,13 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './header.css';
+import { Link } from 'react-router-dom';
+
 export const Header = () => {
   return (
     <>
       <header className="d-flex">
         <div className="topbar--container d-flex">
-          <a href="#" className="topbar--logo d-flex">
+          <Link to="/" className="topbar--logo d-flex">
             <span className="img_glyph">Stack Overflow</span>
-          </a>
+          </Link>
           <ul className="navigation d-flex">
             <li>
               <a href="#">About</a>
@@ -37,14 +39,18 @@ export const Header = () => {
           <nav className="d-flex">
             <ul className="topbar--content d-flex">
               <li>
-                <a href="" className="login-btn">
-                  Log in
-                </a>
+                <Link to="/login">
+                  <a href="" className="login-btn">
+                    Log in
+                  </a>
+                </Link>
               </li>
               <li>
-                <a href="" className="signup-btn">
-                  Sign up
-                </a>
+                <Link to="/signup">
+                  <a href="" className="signup-btn">
+                    Sign up
+                  </a>
+                </Link>
               </li>
             </ul>
           </nav>
