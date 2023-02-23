@@ -1,4 +1,5 @@
-import './App.css';
+import styles from './App.module.css';
+import classNames from 'classnames/bind';
 import { AuthHeader } from './components/Header/AuthHeader';
 import { AskPage } from './pages/AskPage';
 import { Routes, Route } from 'react-router-dom';
@@ -10,8 +11,9 @@ import { SignupPage } from './pages/SignupPage';
 import { Footer } from './components/Footer/Footer';
 
 function App() {
+  const cx = classNames.bind(styles);
   return (
-    <div className="App">
+    <div className={cx('App')}>
       <AuthHeader></AuthHeader>
       <Routes>
         {/* 메인 페이지 (질문 목록 페이지) */}
