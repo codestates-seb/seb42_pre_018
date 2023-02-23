@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import './mainpage.css';
+import styles from './mainpage.module.css';
 import { BiFilter } from 'react-icons/bi';
 import Pagination from '../components/Pagination/Pagination';
 import QuestionSummary from '../components/QuestionSummary/QuestionSummary';
