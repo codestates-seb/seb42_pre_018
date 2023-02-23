@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <AuthHeader></AuthHeader>
       <Routes>
+        {/* 메인 페이지 (질문 목록 페이지) */}
         <Route
           path="/"
           element={
@@ -20,6 +21,7 @@ function App() {
             </SidebarWrapper>
           }
         ></Route>
+        {/* 질문 상세 페이지 */}
         <Route
           path="/detail"
           element={
@@ -28,6 +30,7 @@ function App() {
             </SidebarWrapper>
           }
         ></Route>
+        {/* 질문 작성 페이지 */}
         <Route path="/ask" element={<AskPage />}></Route>
       </Routes>
       <Footer></Footer>
