@@ -6,7 +6,7 @@ header {
   background-color: var(--black-025);
 }
 
-.topbar--container {
+:global .topbar--container {
   width: 100%;
 }
 
