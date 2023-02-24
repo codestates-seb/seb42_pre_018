@@ -16,9 +16,22 @@
   align-items: center;
 }
 
-.icon {
-  color: var(--blue-500) !important;
-} 
-:global .svg-icon {
-  color: var(--blue-500) !important;
+.svg-icon {
+  fill: var(--blue-500) !important;
+}
+
+.form--wrapper {
+  flex-direction: column;
+}
+
+.form--container {
+  background-color: white;
+}
+
+.buttons {
+  flex-direction: column;
+}
+
+#login-form {
+  flex-direction: column;
 }
