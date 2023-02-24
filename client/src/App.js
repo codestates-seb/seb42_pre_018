@@ -9,6 +9,7 @@ import { MainPage } from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import { Footer } from './components/Footer/Footer';
+import { ErrorPage } from './pages/ErrorPage';
 
 function App() {
   const cx = classNames.bind(styles);
@@ -57,6 +58,8 @@ function App() {
         <Route path="/login" element={<LoginPage />}></Route>
         {/* 회원가입 페이지 */}
         <Route path="/signup" element={<SignupPage />}></Route>
+        {/* 에러 페이지 */}
+        <Route path="/error" element={<ErrorPage />}></Route>
       </Routes>
     </div>
   );
