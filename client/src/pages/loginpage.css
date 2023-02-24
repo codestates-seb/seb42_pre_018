@@ -1,0 +1,13 @@
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1264px;
+  background-color: var(--black-050);
+  align-items: center;
+  justify-content: center;
+  min-height: 670px;
+  height: 100vh;
+}
