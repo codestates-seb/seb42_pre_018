@@ -1,0 +1,35 @@
+.errorpage{
+    background-color: #f1f2f3;
+    width: 194.9vh;
+    height: 100vh;
+}
+
+.errorpage__wrap{
+    position: absolute;
+    padding: 0 20px;
+    left: 28%;
+    top: 42%;
+    display: flex;
+}
+
+.errorpage__img{
+    padding-right: 30px;
+}
+
+.errorpage__header{
+    font-size: 25px;
+}
+
+.errorpage__why{
+    margin-top:9px;
+    font-size:17px;
+}
+
+.errorpage__check{
+    margin-top: 20px;
+    font-size:14px;
+}
+
+.errorpage__check p{
+    margin-top: 13px;
+}
