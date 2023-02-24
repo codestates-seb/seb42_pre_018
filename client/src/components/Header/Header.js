@@ -1,14 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import './header.css';
+import styles from './header.module.css';
+import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
+
 export const Header = () => {
+  const cx = classNames.bind(styles);
   return (
     <>
-      <header className="d-flex">
-        <div className="topbar--container d-flex">
-          <a href="#" className="topbar--logo d-flex">
-            <span className="img_glyph">Stack Overflow</span>
-          </a>
-          <ul className="navigation d-flex">
+      <header className={cx('d-flex')}>
+        <div className={cx('topbar--container', 'd-flex')}>
+          <Link to="/" className={cx('topbar--logo', 'd-flex')}>
+            <span className={cx('img_glyph')}>Stack Overflow</span>
+          </Link>
+          <ul className={cx('navigation', 'd-flex')}>
             <li>
               <a href="#">About</a>
             </li>
@@ -19,12 +23,12 @@ export const Header = () => {
               <a href="#">For Teams</a>
             </li>
           </ul>
-          <form action="" id="search" className="d-flex">
-            <div className="searchbar d-flex">
+          <form action="" id="search" className={cx('d-flex')}>
+            <div className={cx('searchbar', 'd-flex')}>
               <input type="text" placeholder="Search..." />
               <svg
                 aria-hidden="true"
-                className="s-input-icon"
+                className={cx('s-input-icon')}
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -34,17 +38,21 @@ export const Header = () => {
               {/* 돋보기 아이콘 */}
             </div>
           </form>
-          <nav className="d-flex">
-            <ul className="topbar--content d-flex">
+          <nav className={cx('d-flex')}>
+            <ul className={cx('topbar--content', 'd-flex')}>
               <li>
-                <a href="" className="login-btn">
-                  Log in
-                </a>
+                <Link to="/login">
+                  <a href="" className={cx('login-btn')}>
+                    Log in
+                  </a>
+                </Link>
               </li>
               <li>
-                <a href="" className="signup-btn">
-                  Sign up
-                </a>
+                <Link to="/signup">
+                  <a href="" className={cx('signup-btn')}>
+                    Sign up
+                  </a>
+                </Link>
               </li>
             </ul>
           </nav>

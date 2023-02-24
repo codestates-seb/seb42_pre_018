@@ -1,4 +1,4 @@
-#mainbar {
+main {
   font-style: inherit;
   color: var(--black-800);
 }
@@ -17,7 +17,7 @@ main {
   padding: 24px 16px;
 }
 
-.d-flex {
+:global .d-flex {
   display: flex;
 }
 

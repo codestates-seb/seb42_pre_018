@@ -1,4 +1,5 @@
-import './questionsummary.css';
+import styles from './questionsummary.module.css';
+import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
 const QuestionSummary = ({
@@ -14,23 +15,24 @@ const QuestionSummary = ({
     question_writer_name,
   },
 }) => {
+  const cx = classNames.bind(styles);
   return (
     <>
-      <div className="question d-flex">
-        <div className="question-stats d-flex">
-          <div className="stats-item">0 votes</div>
-          <div className="stats-item">0 answers</div>
-          <div className="stats-item">{question_views} views</div>
+      <div className={cx('question', 'd-flex')}>
+        <div className={cx('question-stats', 'd-flex')}>
+          <div className={cx('stats-item')}>0 votes</div>
+          <div className={cx('stats-item')}>0 answers</div>
+          <div className={cx('stats-item')}>{question_views} views</div>
         </div>
-        <div className="question-content">
+        <div className={cx('question-content')}>
           <h3>{question_title}</h3>
-          <div className="question-summary">{question_main}</div>
-          <div className="question-meta d-flex">
-            <div className="avatar-wrapper">
+          <div className={cx('question-summary')}>{question_main}</div>
+          <div className={cx('question-meta', 'd-flex')}>
+            <div className={cx('avatar-wrapper')}>
               {/* 여기에 아바타 이미지 삽입 */}
             </div>
-            <div className="username">{question_writer_name}</div>
-            <div className="time">asked 1 min ago</div>
+            <div className={cx('username')}>{question_writer_name}</div>
+            <div className={cx('time')}>asked 1 min ago</div>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ header {
   z-index: 99;
 }
 
-.topbar--container {
+:global .topbar--container {
   width: 100%;
 }
 

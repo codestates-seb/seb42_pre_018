@@ -1,26 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import './authheader.css';
+import styles from './authheader.module.css';
+import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 
 export const AuthHeader = () => {
+  const cx = classNames.bind(styles);
   return (
     <>
-      <header className="d-flex">
-        <div className="topbar--container d-flex">
-          <Link to="/" className="topbar--logo d-flex">
-            <span className="img_glyph">Stack Overflow</span>
+      <header className={cx('d-flex')}>
+        <div className={cx('topbar--container', 'd-flex')}>
+          <Link to="/" className={cx('topbar--logo', 'd-flex')}>
+            <span className={cx('img_glyph')}>Stack Overflow</span>
           </Link>
-          <ul className="navigation d-flex">
+          <ul className={cx('navigation', 'd-flex')}>
             <li>
               <a href="#">Products</a>
             </li>
           </ul>
-          <form action="" id="search" className="d-flex">
-            <div className="searchbar d-flex">
+          <form action="" id={cx('search')} className={cx('d-flex')}>
+            <div className={cx('searchbar', 'd-flex')}>
               <input type="text" placeholder="Search..." />
               <svg
                 aria-hidden="true"
-                className="s-input-icon"
+                className={cx('s-input-icon')}
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -30,11 +32,11 @@ export const AuthHeader = () => {
               {/* 돋보기 아이콘 */}
             </div>
           </form>
-          <nav className="d-flex">
-            <ul className="topbar--content d-flex">
+          <nav className={cx('d-flex')}>
+            <ul className={cx('topbar--content', 'd-flex')}>
               <li>
                 <a href="#">
-                  <div className="avatar">
+                  <div className={cx('avatar')}>
                     {/* 여기에 프로필 이미지 삽입 */}
                   </div>
                 </a>
@@ -43,7 +45,7 @@ export const AuthHeader = () => {
                 <a href="#">
                   <svg
                     aria-hidden="true"
-                    className="svg-icon iconInbox"
+                    className={cx('svg-icon', 'iconInbox')}
                     width="20"
                     height="18"
                     viewBox="0 0 20 18"
@@ -56,7 +58,7 @@ export const AuthHeader = () => {
                 <a href="#">
                   <svg
                     aria-hidden="true"
-                    className="svg-icon iconAchievements"
+                    className={cx('svg-icon', 'iconAchievements')}
                     width="18"
                     height="18"
                     viewBox="0 0 18 18"
@@ -69,7 +71,7 @@ export const AuthHeader = () => {
                 <a href="#">
                   <svg
                     aria-hidden="true"
-                    className="svg-icon iconHelp"
+                    className={cx('svg-icon', 'iconHelp')}
                     width="18"
                     height="18"
                     viewBox="0 0 18 18"
@@ -82,7 +84,7 @@ export const AuthHeader = () => {
                 <a href="#">
                   <svg
                     aria-hidden="true"
-                    className="svg-icon iconStackExchange"
+                    className={cx('svg-icon', 'iconStackExchange')}
                     width="18"
                     height="18"
                     viewBox="0 0 18 18"

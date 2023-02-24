@@ -1,39 +1,54 @@
-import './App.css';
-import { Footer } from './components/Footer/Footer';
+import styles from './App.module.css';
+import classNames from 'classnames/bind';
 import { AuthHeader } from './components/Header/AuthHeader';
 import { AskPage } from './pages/AskPage';
 import { Routes, Route } from 'react-router-dom';
 import { DetailPage } from './pages/DetailPage';
-import SidebarWrapper from './components/SidebarWrapper/SidebarWrapper';
+import LayoutWrapper from './components/LayoutWrapper/LayoutWrapper';
 import { MainPage } from './pages/MainPage';
+import { LoginPage } from './pages/LoginPage';
+import { SignupPage } from './pages/SignupPage';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
+  const cx = classNames.bind(styles);
   return (
-    <div className="App">
+    <div className={cx('App')}>
       <AuthHeader></AuthHeader>
       <Routes>
         {/* 메인 페이지 (질문 목록 페이지) */}
         <Route
           path="/"
           element={
-            <SidebarWrapper>
+            <LayoutWrapper>
               <MainPage />
-            </SidebarWrapper>
+            </LayoutWrapper>
           }
         ></Route>
         {/* 질문 상세 페이지 */}
         <Route
           path="/detail"
           element={
-            <SidebarWrapper>
+            <LayoutWrapper>
               <DetailPage />
-            </SidebarWrapper>
+            </LayoutWrapper>
           }
         ></Route>
         {/* 질문 작성 페이지 */}
-        <Route path="/ask" element={<AskPage />}></Route>
+        <Route
+          path="/ask"
+          element={
+            <>
+              <AskPage />
+              <Footer />
+            </>
+          }
+        ></Route>
+        {/* 로그인 페이지 */}
+        <Route path="/login" element={<LoginPage />}></Route>
+        {/* 회원가입 페이지 */}
+        <Route path="/signup" element={<SignupPage />}></Route>
       </Routes>
-      <Footer></Footer>
     </div>
   );
 }
