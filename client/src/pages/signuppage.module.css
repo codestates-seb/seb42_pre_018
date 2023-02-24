@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .container {
   width: 100%;
   height: 968px;
@@ -37,6 +41,7 @@
 }
 
 .text-wrapper {
+  margin-top: 90px;
   margin-right: 48px;
   margin-bottom: 128px;
 }
@@ -51,6 +56,8 @@
   background-color: white;
   height: 644px;
   padding: 24px;
+  box-shadow: var(--bs-xl) !important;
+  border-radius: 7px;
 }
 
 .buttons {
@@ -108,19 +115,86 @@
 .signup-item {
   margin-top: 6px;
   margin-bottom: 6px;
+  flex-direction: column;
+}
+
+.signup-item input {
+  border: 1px solid var(--bc-darker);
+  border-radius: 3px;
+  width: 100%;
+  padding: 0.6em 0.7em;
+  color: var(--fc-dark);
+}
+
+.pw-caption {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--fc-light);
+}
+
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)){
+  #opt-in {
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    margin-right: 3px;
+    border: 1px solid var(--bc-darker);
+    border-radius: 3px;
+    cursor: pointer;
+  }
 }
 
 .check-label {
+  display: inline-block;
   font-weight: 400;
   font-size: 12px;
   padding: 2px;
+  line-height: 18px;
 }
 
 .captcha {
   width: 266px;
   height: 144px;
+  margin-bottom: 15px;
 }
 
 .captcha img {
   width: 100%;
+}
+
+.signup-btn {
+  font-size: 13px;
+  padding: 0.7rem;
+  padding-top: 0.5rem;
+  background-color: var(--blue-500);
+  color: white;
+  box-shadow: inset rgba(255, 255, 255, 0.4) 0px 1px 0px 0px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid var(--blue-500);
+  margin-right: 10px;
+  white-space: nowrap !important;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  flex-grow: 1;
+}
+
+.signup-btn:hover {
+  background-color: var(--blue-600);
+}
+
+.signup-caption {
+  margin-top: 32px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--fc-light);
+}
+
+.signup-caption a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--blue-600);
 }
