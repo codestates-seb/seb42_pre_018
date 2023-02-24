@@ -4,11 +4,11 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { RightSidebar } from '../RightSidebar/RightSidebar';
 import { Footer } from '../Footer/Footer';
 
-const LayoutWrapper = ({ children }) => {
+const LayoutWrapper = ({ page, children }) => {
   return (
     <>
       <div className="main__flex">
-        <Sidebar></Sidebar>
+        <Sidebar page={page}></Sidebar>
         {children}
         <RightSidebar></RightSidebar>
       </div>

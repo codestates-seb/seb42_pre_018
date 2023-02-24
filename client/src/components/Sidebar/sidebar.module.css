@@ -24,6 +24,11 @@
 .sidebar__li a:hover, .sidebar__home a:hover{
     color: #000;
 }
+
+.sidebar__q__icon svg path {
+    fill: currentColor;
+}
+
 .sidebar__h1{
     font-size: 11px;
     margin: 16px 0 2px 8px;
@@ -77,9 +82,11 @@
     padding: 8px 6px 8px 8px;
     color: var(--black-600);
     fill: var(--black-400);
+    margin-top: 4px;
 }
 .sidebar__q__icon svg {
     margin-right: 4px;
+    fill: var(--black-400);
 }
 .icon__bg {
     background-color: var(--orange-400);
@@ -90,4 +97,8 @@
     text-align: center;
     line-height: 130%;
     margin-right: 5px;
+}
+
+.sidebar__clicked {
+    background-color: #000;
 }

@@ -20,7 +20,16 @@ function App() {
         <Route
           path="/"
           element={
-            <LayoutWrapper>
+            <LayoutWrapper page="home">
+              <MainPage />
+            </LayoutWrapper>
+          }
+        ></Route>
+        {/* 메인 페이지 (questions 클릭시) */}
+        <Route
+          path="/questions"
+          element={
+            <LayoutWrapper page="questions">
               <MainPage />
             </LayoutWrapper>
           }
