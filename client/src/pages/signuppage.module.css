@@ -16,16 +16,40 @@
   align-items: center;
 }
 
+.center--main h1 {
+  margin-bottom: 30px;
+  line-height: 100%;
+}
+
+.content {
+  margin-bottom: 19px;
+  font-size: 15px;
+}
+
 .svg-icon {
   fill: var(--blue-500) !important;
+  margin-right: 8px;
+}
+
+.p-13 {
+  font-size: 13px;
+  color: hsl(210,8%,45%);;
+}
+
+.text-wrapper {
+  margin-right: 48px;
+  margin-bottom: 128px;
 }
 
 .form--wrapper {
   flex-direction: column;
+  flex-shrink: 0;
+  max-width: 316px;
 }
 
 .form--container {
   background-color: white;
+  height: 644px;
 }
 
 .buttons {
@@ -34,4 +58,10 @@
 
 #login-form {
   flex-direction: column;
+}
+
+.check-label {
+  font-weight: 400;
+  font-size: 12px;
+  padding: 2px;
 }
