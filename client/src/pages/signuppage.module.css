@@ -50,18 +50,77 @@
 .form--container {
   background-color: white;
   height: 644px;
+  padding: 24px;
 }
 
 .buttons {
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
-#login-form {
+.buttons button {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: var(--black-800);
+  padding: 0.54rem;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google {
+  background-color: white;
+  border: 1px solid var(--black-100);
+}
+
+.github {
+  background-color: var(--black-750);
+  border: 1px solid var(--black-100);
+  color: white !important;
+}
+.github svg path {
+  fill: white;
+}
+.facebook {
+  background-color: #385499;
+  color: white !important;
+  border: 1px solid ;
+}
+.facebook svg path {
+  fill: white;
+}
+
+#signup-form {
   flex-direction: column;
+}
+
+.signup-box {
+  flex-direction: column;
+}
+
+.signup-box label {
+  color: var(--fc-dark);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.signup-item {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .check-label {
   font-weight: 400;
   font-size: 12px;
   padding: 2px;
+}
+
+.captcha {
+  width: 266px;
+  height: 144px;
+}
+
+.captcha img {
+  width: 100%;
 }
