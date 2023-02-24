@@ -7,7 +7,7 @@ import { DetailPage } from './pages/DetailPage';
 import LayoutWrapper from './components/LayoutWrapper/LayoutWrapper';
 import { MainPage } from './pages/MainPage';
 import { LoginPage } from './pages/LoginPage';
-import { SignupPage } from './pages/SignupPage';
+import SignupPage from './pages/SignupPage';
 import { Footer } from './components/Footer/Footer';
 
 function App() {
