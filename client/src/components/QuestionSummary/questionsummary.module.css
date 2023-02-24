@@ -2,7 +2,7 @@
   padding: 16px;
   font: inherit;
   border-bottom: 1px solid var(--black-075);
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .question-stats {
@@ -12,6 +12,7 @@
   margin-right: 16px;
   font-size: 13px;
   row-gap: 7px;
+  flex-shrink: 0;
 }
 
 .stats-item {
