@@ -1,0 +1,37 @@
+.buttons {
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.buttons button {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: var(--black-800);
+  padding: 0.54rem;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google {
+  background-color: white;
+  border: 1px solid var(--black-100);
+}
+
+.github {
+  background-color: var(--black-750);
+  border: 1px solid var(--black-100);
+  color: white !important;
+}
+.github svg path {
+  fill: white;
+}
+.facebook {
+  background-color: #385499;
+  color: white !important;
+  border: 1px solid ;
+}
+.facebook svg path {
+  fill: white;
+}
