@@ -99,6 +99,14 @@
     margin-right: 5px;
 }
 
+.sidebar__clicked, .sidebar__clicked a {
+    background-color: var(--black-050);
+    margin-left: 0;
+    padding-left: 4px;
+    font-weight: 700;
+    color: black !important;
+
+}
 .sidebar__clicked {
-    background-color: #000;
+    border-right: 3px solid var(--orange-400);
 }

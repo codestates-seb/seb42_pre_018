@@ -1,10 +1,11 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+
 import styles from './sidebar.module.css';
 import { Link } from 'react-router-dom';
 // import { useState } from 'react';
 import classNames from 'classnames/bind';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 
 function Sidebar({ page }) {
   const cx = classNames.bind(styles);
@@ -12,14 +13,24 @@ function Sidebar({ page }) {
     <nav className={styles.sidebar__Nav}>
       <div className={styles.sticky}>
         <ol>
-          <li className={cx('sidebar__home', page === 'home' && 'sidebar__clicked')}>
+          <li
+            className={cx(
+              'sidebar__home',
+              page === 'home' && 'sidebar__clicked'
+            )}
+          >
             <Link to="/">Home</Link>
-            
           </li>
         </ol>
         <h1 className={styles.sidebar__h1}>PUBLIC</h1>
         <ol>
-          <li className={cx('sidebar__li', 'sidebar__q__icon')}>
+          <li
+            className={cx(
+              'sidebar__li',
+              'sidebar__q__icon',
+              page === 'questions' && 'sidebar__clicked'
+            )}
+          >
             <a href="/questions">
               <svg
                 aria-hidden="true"
@@ -109,12 +120,14 @@ function Sidebar({ page }) {
       </div>
     </nav>
   );
-};
+}
 
 Sidebar.propsTypes = {
   page: PropTypes.string.isRequired,
 };
 
-Sidebar.defaultProps= {
-  page: "기본값"
+Sidebar.defaultProps = {
+  page: '기본값',
 };
+
+export default Sidebar;
