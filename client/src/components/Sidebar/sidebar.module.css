@@ -1,6 +1,8 @@
 .sidebar__Nav a{
     line-height: calc(17 / 13);
     color: var(--black-600);
+    cursor: pointer;
+    display: flex;
 }
 .sidebar__Nav{
     min-width: 164px;
@@ -24,7 +26,7 @@
 }
 .sidebar__h1{
     font-size: 11px;
-    margin: 16px 0 0 8px;
+    margin: 16px 0 2px 8px;
     box-sizing: border-box;
     color: var(--fc-light);
     display: flex;
@@ -32,6 +34,7 @@
 }
 .sidebar__h1__icon{
     padding: 0 12px;
+    fill: var(--black-500);
 }
 .sidebar__home{
     padding: 0;
@@ -49,12 +52,42 @@
     position: absolute;
     left: -14px;
 }
-.sidebar__cf__icon::before{
-    content: 'c';
+
+.sidebar__cf__icon{
+    display: flex;
+    padding: 8px 6px 8px 8px;
+    color: var(--black-600);
+    line-height: 22px;
+    margin-top: 2px;
+    fill: white;
 }
-.sidebar__ec__icon::before{
-    content: 'e';
+.sidebar__ec__icon{
+    display: flex;
+    padding: 8px 6px 8px 8px;
+    color: var(--black-600);
+    fill: var(--orange-400);
+    line-height: 2px;
+    margin-top: 2px;
 }
-.sidebar__q__icon::before{
-    content: 'q';
+.sidebar__ec__icon svg {
+    margin-right: 4px;
+}
+.sidebar__q__icon {
+    display: flex;
+    padding: 8px 6px 8px 8px;
+    color: var(--black-600);
+    fill: var(--black-400);
+}
+.sidebar__q__icon svg {
+    margin-right: 4px;
+}
+.icon__bg {
+    background-color: var(--orange-400);
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    text-align: center;
+    line-height: 130%;
+    margin-right: 5px;
 }
