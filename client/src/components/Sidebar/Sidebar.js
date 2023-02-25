@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 function Sidebar({ page }) {
   const cx = classNames.bind(styles);
+
   return (
     <nav className={styles.sidebar__Nav}>
       <div className={styles.sticky}>

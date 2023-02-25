@@ -4,11 +4,26 @@ import classNames from 'classnames/bind';
 import { BiFilter } from 'react-icons/bi';
 import Pagination from '../components/Pagination/Pagination';
 import QuestionSummary from '../components/QuestionSummary/QuestionSummary';
-import questions from '../assets/data/questions.json';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { allQuestionsData } from '../api/questionApi';
 
 export const MainPage = () => {
   const cx = classNames.bind(styles);
+
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    const fetchAllQuestions = async () => {
+      try {
+        const res = await allQuestionsData();
+        setQuestions(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchAllQuestions();
+  }, []);
 
   return (
     <>
