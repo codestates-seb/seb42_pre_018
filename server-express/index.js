@@ -35,10 +35,9 @@ app.get("/questions/:id", (req, res) => {
   })
 })
 
-app.post("/messages", (req, res) => {
-  const q = "insert into messages (`content`, `password`) values (?)"
-  const values = [req.body.content, req.body.password]
-
+app.post("/ask", (req, res) => {
+  const q = "insert into question (`question_title`, `question_main`) values (?)"
+  const values = [req.body.title, req.body.main];
   db.query(q, [values], (err, data) => {
     if(err) return res.json(err)
     return res.json("Message has been sent successfully")

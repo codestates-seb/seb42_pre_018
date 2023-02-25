@@ -1,6 +1,35 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-unused-vars */
+
+import { useState } from 'react';
+import { createSingleQuestion } from '../api/questionApi';
 import styles from './AskPage.module.css';
+import { useNavigate } from 'react-router-dom';
+
+
 
 export const AskPage = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    title: '',
+    main: '',
+  });
+  const { title, main } = formData;
+
+  const handleChange = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value});
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try{
+      await createSingleQuestion({ title, main });
+      navigate("/");
+    }catch(err){
+      console.log(err)
+    }
+  }
+
   return (
     <main className={styles.askpage}>
       <div className={styles.askpage__wrap}>
@@ -29,21 +58,26 @@ export const AskPage = () => {
             <li>Review your question and post it to the site.</li>
           </ul>
         </div>
-        <form className={styles.askpage__form}>
-          <h2>Title</h2>
-          <p>
-            Be specific and imagine you’re asking a question to another person.
-          </p>
-          <input></input>
-        </form>
-        <form className={styles.askpage__form}>
-          <h2>What are the details of your problem?</h2>
-          <p>
-            Introduce the problem and expand on what you put in the title.
-            Minimum 20 characters.
-          </p>
-          <input></input>
-          <button className={styles.askpage__btn}>Review your question</button>
+        <form onSubmit={handleSubmit}>
+          <div className={styles.askpage__form}>
+            <h2>Title</h2>
+            <p>
+              Be specific and imagine you’re asking a question to another
+              person.
+            </p>
+            <input type="text" name="title" id="title" value={title} onChange={handleChange} required></input>
+          </div>
+          <div className={styles.askpage__form}>
+            <h2>What are the details of your problem?</h2>
+            <p>
+              Introduce the problem and expand on what you put in the title.
+              Minimum 20 characters.
+            </p>
+            <input type="text" name="main" id="main" value={main} onChange={handleChange} required></input>
+            <button className={styles.askpage__btn}>
+              Review your question
+            </button>
+          </div>
         </form>
       </div>
     </main>
