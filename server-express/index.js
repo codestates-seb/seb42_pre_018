@@ -26,6 +26,15 @@ app.get("/questions", (req, res) => {
   })
 })
 
+app.get("/questions/:id", (req, res) => {
+  const questionId = req.params.id;
+  const q = "select * from question where question_id = ?"
+  db.query(q, [questionId], (err, data) => {
+    if(err) return res.json(err)
+    return res.json(data)
+  })
+})
+
 app.post("/messages", (req, res) => {
   const q = "insert into messages (`content`, `password`) values (?)"
   const values = [req.body.content, req.body.password]

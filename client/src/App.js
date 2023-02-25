@@ -37,7 +37,7 @@ function App() {
         ></Route>
         {/* 질문 상세 페이지 */}
         <Route
-          path="/detail"
+          path="/questions/:id"
           element={
             <LayoutWrapper>
               <DetailPage />

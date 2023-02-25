@@ -1,6 +1,7 @@
 import styles from './questionsummary.module.css';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const QuestionSummary = ({
   question: {
@@ -25,7 +26,10 @@ const QuestionSummary = ({
           <div className={cx('stats-item')}>{question_views} views</div>
         </div>
         <div className={cx('question-content')}>
-          <h3>{question_title}</h3>
+          <Link to={`/questions/${question_id}`}>
+            <h3>{question_title}</h3>
+          </Link>
+
           <div className={cx('question-summary')}>{question_main}</div>
           <div className={cx('question-meta', 'd-flex')}>
             <div className={cx('avatar-wrapper')}>
