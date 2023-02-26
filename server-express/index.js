@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.json("hello this is the backend")
 })
 
-app.get("/questions", (req, res) => {
+app.get("/questions/all", (req, res) => {
   const q = "select * from question"
   db.query(q, (err, data) => {
     if(err) return res.json(err)

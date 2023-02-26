@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import styles from './DetailPage.module.css';
 import dummyImg from '../assets/images/dummy__profile__img01.jpg';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { singleQuestionData } from '../api/questionApi';
+import { deleteQuestion, singleQuestionData } from '../api/questionApi';
 
 export const DetailPage = () => {
+  const navigate = useNavigate();
   const [question, setQuestion] = useState({});
   const params = useParams();
   const id = params.id;
@@ -20,6 +21,15 @@ export const DetailPage = () => {
     };
     fetchQuestion();
   }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteQuestion(id);
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <main className={styles.detailpage}>
@@ -56,7 +66,7 @@ export const DetailPage = () => {
                 <button>Edit</button>
               </Link>
 
-              <button>Delete</button>
+              <button onClick={() => handleDelete(id)}>Delete</button>
             </div>
             <div
               className={`${styles.detailpage__asked} ${styles.detailpage__asked__post}`}

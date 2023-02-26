@@ -32,7 +32,7 @@ function Sidebar({ page }) {
               page === 'questions' && 'sidebar__clicked'
             )}
           >
-            <a href="/questions">
+            <a href="/questions/all">
               <svg
                 aria-hidden="true"
                 className="svg-icon iconGlobe"
