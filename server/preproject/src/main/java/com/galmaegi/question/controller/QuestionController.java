@@ -37,7 +37,6 @@ public class QuestionController {
     private final UserMapper userMapper;
     private final AnswerMapper answerMapper;
     private final AnswerService answerService;
-    private final QuestionTagService questionTagService;
 
 
 
@@ -66,7 +65,6 @@ public class QuestionController {
         Page<Question> pageQuestions = questionService.findQuestions(page-1,size,sort);
 
         List<Question> questions = pageQuestions.getContent();
-        questions.stream().forEach(question -> question.setQuestionTags(questionTagService.findVerifiedQuestionTags(question))); //해당 질문의 Tag상태가 QUESTIONS_TAG_EXIST만 표시
 
         return new ResponseEntity<>(new MultiResponseDto<>(
                 mapper.questionsToQuestionResponseDtos(questions),
@@ -135,15 +133,10 @@ public class QuestionController {
         Page<Question> searchResult = questionService.searchQuestions(keyWord,page-1,size,sort);
 
         List<Question> questions = searchResult.getContent();
-        questions.stream().forEach(question -> question.setQuestionTags(questionTagService.findVerifiedQuestionTags(question))); //해당 질문의 Tag상태가 QUESTIONS_TAG_EXIST만 표시
 
         return new ResponseEntity<>(new MultiResponseDto<>(
                 mapper.questionsToQuestionResponseDtos(questions),
                 searchResult),HttpStatus.OK);
 
     }
-
-
-
-
 }
