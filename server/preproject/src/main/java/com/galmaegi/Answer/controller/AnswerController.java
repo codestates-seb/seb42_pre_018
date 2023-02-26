@@ -80,6 +80,4 @@ public class AnswerController {
                 new SingleResponseDto<>(mapper.answerToAnswerResponseDto(userMapper,votedAnswer)),
                 HttpStatus.OK);
     }
-
-
 }

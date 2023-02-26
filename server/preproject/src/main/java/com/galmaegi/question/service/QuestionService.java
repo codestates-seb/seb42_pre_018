@@ -90,7 +90,6 @@ public class QuestionService {
         Question findQuestion = findVerifiedQuestion(questionId);//요청된 질문이 DB에 없으면 에러
         findQuestion.setVote(vote);
         Question updatedQuestion =questionRepository.save(findQuestion);
-        updatedQuestion.setQuestionTags(questionTagService.findVerifiedQuestionTags(updatedQuestion)); //해당 질문의 Tag상태가 QUESTIONS_TAG_EXIST만 표시
         return updatedQuestion;
     }
 
@@ -111,17 +110,9 @@ public class QuestionService {
                 .ifPresent(questionStatus->findQuestion.setQuestionStatus(questionStatus));
 
         System.out.println("출력! ->"+findQuestion.getQuestionId());
-        System.out.println("출력! ->" +findQuestion.getQuestionTags().stream().map(questionTag -> questionTag.getQuestion().getQuestionId()).
-                collect(Collectors.toList()));
 
         Question updatedQuestion = questionRepository.save(findQuestion);
 
-        if(!question.getQuestionTags().isEmpty()){//태그 수정 (태그 DB업데이트)
-            questionTagService.deleteQuestionTags(question); //기존 태그 삭제(QUESTIONS_TAG_NOT_EXIST)됌
-
-            questionTagService.createQuestionTags(question.getQuestionTags()); //새 태그로 갱신
-        }
-        updatedQuestion.setQuestionTags(questionTagService.findVerifiedQuestionTags(updatedQuestion));//해당 질문의 Tag상태가 QUESTIONS_TAG_EXIST만 표시
         return updatedQuestion;
     }
 
