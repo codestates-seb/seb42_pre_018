@@ -30,7 +30,7 @@ export const MainPage = () => {
       <div className={cx('title', 'd-flex')}>
         <h1>All Questions</h1>
         <div>
-          <Link to="/ask">
+          <Link to="/questions/ask">
             <button>Ask Question</button>
           </Link>
         </div>

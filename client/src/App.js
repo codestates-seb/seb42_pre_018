@@ -10,6 +10,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import { Footer } from './components/Footer/Footer';
 import { ErrorPage } from './pages/ErrorPage';
+import { EditPage } from './pages/EditPage';
 
 function App() {
   const cx = classNames.bind(styles);
@@ -28,7 +29,7 @@ function App() {
         ></Route>
         {/* 메인 페이지 (questions 클릭시) */}
         <Route
-          path="/questions"
+          path="/questions/all"
           element={
             <LayoutWrapper page="questions">
               <MainPage />
@@ -46,7 +47,7 @@ function App() {
         ></Route>
         {/* 질문 작성 페이지 */}
         <Route
-          path="/ask"
+          path="/questions/ask"
           element={
             <>
               <AskPage />
@@ -54,6 +55,8 @@ function App() {
             </>
           }
         ></Route>
+        {/* 질문 수정 페이지 */}
+        <Route path="/questions/:id/edit" element={<EditPage />}></Route>
         {/* 로그인 페이지 */}
         <Route path="/login" element={<LoginPage />}></Route>
         {/* 회원가입 페이지 */}

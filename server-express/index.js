@@ -35,7 +35,7 @@ app.get("/questions/:id", (req, res) => {
   })
 })
 
-app.post("/ask", (req, res) => {
+app.post("/questions/ask", (req, res) => {
   const q = "insert into question (`question_title`, `question_main`) values (?)"
   const values = [req.body.title, req.body.main];
   db.query(q, [values], (err, data) => {
@@ -44,28 +44,28 @@ app.post("/ask", (req, res) => {
   })
 })
 
-app.delete("/messages/:id", (req, res) => {
-  const messageId = req.params.id;
-  const q = "delete from messages where id = ?"
+app.delete("/questions/:id", (req, res) => {
+  const questionId = req.params.id;
+  const q = "delete from question where question_id = ?"
 
-  db.query(q, [messageId], (err, data) => {
+  db.query(q, [questionId], (err, data) => {
     if(err) return res.json(err)
     return res.json("Message has been deleted successfully")
   })
 })
 
-app.put("/messages/:id", (req, res) => {
-  const messageId = req.params.id;
-  const q = "update messages set `content` = ?, `password` = ? where id = ?"
+app.patch("/questions/:id/edit", (req, res) => {
+  const questionId = req.params.id;
+  const q = "update question set `question_title` = ?, `question_main` = ? where question_id = ?"
 
   const values = [
-    req.body.content,
-    req.body.password
+    req.body.title,
+    req.body.main
   ]
 
-  db.query(q, [...values, messageId], (err, data) => {
+  db.query(q, [...values, questionId], (err, data) => {
     if(err) return res.json(err)
-    return res.json("Message has been updated successfully")
+    return res.json("Question has been updated successfully")
   })
 })
 

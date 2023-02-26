@@ -8,9 +8,8 @@ import { singleQuestionData } from '../api/questionApi';
 export const DetailPage = () => {
   const [question, setQuestion] = useState({});
   const params = useParams();
-
+  const id = params.id;
   useEffect(() => {
-    const id = params.id;
     const fetchQuestion = async () => {
       try {
         const res = await singleQuestionData(id);
@@ -53,7 +52,10 @@ export const DetailPage = () => {
           <div className={styles.detailpage__menu}>
             <div>
               <button>Share</button>
-              <button>Edit</button>
+              <Link to={`/questions/${id}/edit`}>
+                <button>Edit</button>
+              </Link>
+
               <button>Delete</button>
             </div>
             <div
@@ -95,6 +97,7 @@ export const DetailPage = () => {
           <div className={styles.detailpage__menu}>
             <div>
               <button>Share</button>
+
               <button>Edit</button>
               <button>Delete</button>
             </div>

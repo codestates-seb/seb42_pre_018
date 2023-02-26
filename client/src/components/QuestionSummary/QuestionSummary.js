@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styles from './questionsummary.module.css';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
@@ -26,7 +27,9 @@ const QuestionSummary = ({
           <div className={cx('stats-item')}>{question_views} views</div>
         </div>
         <div className={cx('question-content')}>
-          <Link to={`/questions/${question_id}`}>
+          <Link
+            to={`/questions/${question_id}`}
+          >
             <h3>{question_title}</h3>
           </Link>
 

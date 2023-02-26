@@ -4,6 +4,7 @@ import {
   allQuestionsData as _allQuestionsData,
   singleQuestionData as _singleQuestionData,
   createSingleQuestion as _createSingleQuestion,
+  editQuestion as _editQuestion,
 } from './urls';
 
 export const allQuestionsData = () => {
@@ -16,4 +17,8 @@ export const singleQuestionData = (id) => {
 
 export const createSingleQuestion = (formData) => {
   return axios.post(_createSingleQuestion, formData);
+};
+
+export const editQuestion = (formData, id) => {
+  return axios.patch(_editQuestion.replace('{id}', id), formData);
 };
